@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Requests</title>
+    <link rel="stylesheet" href="view-request.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1 class="header-title">Travel Requestor</h1>
+            <button id="logoutButton" class="logout-button">Logout</button>
+        </header>
+        <div class="content">
+            <div class="main-content">
+                <div id="viewSection" class="section">
+                    <h2>View Travel Requests</h2>
+                    <label for="requestStatus">Filter by Priority:</label>
+                    <select id="requestStatus">
+                        <option value="all">All</option>
+                        <option value="critical">Critical</option>
+                        <option value="normal">Normal</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                    <table id="requestsTable">
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Destination</th>
+                                <th>Priority</th>
+                                <th>Details</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="view-request.js"></script>
+</body>
+</html>

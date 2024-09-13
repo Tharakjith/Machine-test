@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 80vw;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.header-title {
+    color: #00bcd4;
+    margin: 0;
+}
+
+.logout-button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #e64a19;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
+    padding: 15px;
+}
+
+.section {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #00bcd4;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+#requestsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#requestsTable th, #requestsTable td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+#requestsTable th {
+    background-color: #333;
+}
+
+#requestsTable td {
+    background-color: #1e1e1e;
+}
+
+#requestsTable .action-select {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#requestsTable .action-select:hover {
+    background-color: #0097a7;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 95vw;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Requestor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center my-4">
+            <h1>Travel Requestor</h1>
+            <button id="logout-btn" class="btn btn-danger">Logout</button>
+        </header>
+
+        <div class="row">
+        
+            <nav id="sidebar" class="col-md-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <button class="nav-link btn" id="form-btn">Form</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link btn" id="view-btn">View Requests</button>
+                    </li>
+                </ul>
+            </nav>
+
+            
+            <main id="main-content" class="col-md-9">
+                
+                <div id="form-section" class="d-none">
+                    <h3>Travel Request Form</h3>
+                    <form id="travel-form">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="eid" class="form-label">Emp Id</label>
+                                <input type="text" id="eid" class="form-control" placeholder="ID">
+                            </div>
+                            <div class="col">
+                                <label for="ename" class="form-label">Emp Name</label>
+                                <input type="text" id="ename" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="pro" class="form-label">Project</label>
+                                <input type="text" id="pro" class="form-control" placeholder="Project">
+                            </div>
+                            <div class="col">
+                                <label for="cause" class="form-label">Cause for Travel</label>
+                                <input type="text" id="cause" class="form-control" placeholder="Cause">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="source" class="form-label">Source</label>
+                                <input type="text" id="source" class="form-control" placeholder="Source">
+                            </div>
+                            <div class="col">
+                                <label for="place" class="form-label">Destination</label>
+                                <input type="text" id="place" class="form-control" placeholder="Destination">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="from-date" class="form-label">From Date</label>
+                                <input type="date" id="from-date" class="form-control">
+                            </div>
+                            <div class="col">
+                                <label for="days" class="form-label">No of Days</label>
+                                <select id="days" class="form-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="to-date" class="form-label">To Date</label>
+                                <input type="date" id="to-date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mot" class="form-label">Mode of Travel</label>
+                            <input type="text" id="mot" class="form-control" placeholder="Mode of Travel">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+
+        
+                <div id="view-section" class="d-none">
+                    <h3>View Requests</h3>
+                    <div class="mb-3">
+                        <label for="priority-filter" class="form-label">Filter by Priority</label>
+                        <select id="priority-filter" class="form-select">
+                            <option value="all">All</option>
+                            <option value="critical">Critical</option>
+                            <option value="normal">Normal</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                    </div>
+                    <table id="requests-table" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Employee Name</th>
+                                <th>Destination</th>
+                                <th>Priority</th>
+                                <th>View Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="request-form.js"></script>
+</body>
+</html>
